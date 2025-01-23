@@ -1,29 +1,30 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { updateForm, resetForm, setLoggedIn } from "./redux/FormSlice";
+import { updateForm, setLoggedIn } from "./redux/FormSlice";
 
 function FormComponent() {
   const form = useSelector((state) => state.form); //redux storedaki form stateine erişir
   const dispatch = useDispatch();
-  const loggedIn = useSelector((state) => state.form.isLoggedIn);
+//   const loggedIn = useSelector((state) => state.form.isLoggedIn);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    dispatch(updateForm({ field: name, value }));
+    dispatch(updateForm({ field:name, value }));
+
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    dispatch(resetForm());
     dispatch(setLoggedIn(true));
-    console.log("submit edildi kıızzz korkmaa");
+    // dispatch(resetForm());
+
   };
 
   return (
     <>
       <form onSubmit={handleSubmit}>
         <div>
-          <label>Name:</label>
+          <label>User Name</label>
           <input
             type="text"
             name="name"
@@ -32,15 +33,15 @@ function FormComponent() {
           />
         </div>
         <div>
-          <label>Email:</label>
+          <label>Password</label>
           <input
             type="text"
-            name="email"
-            value={form.email}
+            name="password"
+            value={form.password}
             onChange={handleChange}
           />
         </div>
-        <div>
+        {/* <div>
           <label>Message:</label>
           <input
             type="text"
@@ -48,8 +49,8 @@ function FormComponent() {
             value={form.message}
             onChange={handleChange}
           />
-        </div>
-        <button type="submit">Submit</button>
+        </div> */}
+        <button type="submit">Log In</button>
       </form>
     </>
   );
