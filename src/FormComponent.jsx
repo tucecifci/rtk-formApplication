@@ -22,7 +22,7 @@ function FormComponent() {
 
   return (
     <>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className="bg-blue-500">
         <div>
           <label>User Name</label>
           <input
