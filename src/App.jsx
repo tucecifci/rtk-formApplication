@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./App.css";
+import './index.css';
 import FormComponent from "./FormComponent";
 import { useSelector } from "react-redux";
 import WelcomePage from "./WelcomePage";
@@ -10,7 +11,7 @@ function App() {
 
   console.log("Is Logged In:", loggedIn);
   console.log("Name in Redux:", name);
-  
+
   return loggedIn ? <WelcomePage /> : <FormComponent />
 
       {/* {!loggedIn ? <FormComponent /> :
