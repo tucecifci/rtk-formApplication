@@ -77,27 +77,27 @@ During the development of this project, I gained valuable experience and deepene
 3.Conditional Rendering:
 - Implementing logic to render components based on specific conditions, such as the user's authentication status.
 
-4.Form Validation:
+4. Form Validation:
 
 - Validating input fields to ensure required fields are filled before proceeding.
 - Displaying error messages when validation fails.
 
-5.Tailwind CSS:
+5. Tailwind CSS:
 
 - Using utility-first classes to style components effectively and efficiently.
 - Applying responsive and modern designs with minimal effort.
 
-6.Project Structuring:
+6. Project Structuring:
 
 - Organizing files and folders for better readability and maintainability.
 - Separating Redux logic, components, and styles for a clean project architecture.
 
-7.Vite Development Workflow:
+7. Vite Development Workflow:
 
 - Setting up a fast development environment with Vite.
 - Understanding the benefits of Vite for modern React projects.
 
-8.Git and GitHub:
+8. Git and GitHub:
 
 - Pushing code to a GitHub repository for version control and collaboration.
 - Writing a clear and informative README file.
@@ -110,7 +110,7 @@ This project serves as a foundation for learning and experimenting with React an
 
 - Persistent State Management:
 
-Store user authentication status (isLoggedIn) and form data in localStorage or sessionStorage to maintain state across page reloads.
+- Store user authentication status (isLoggedIn) and form data in localStorage or sessionStorage to maintain state across page reloads.
 Integration with APIs:
 
 - Fetch data from an external API using Redux Toolkit's createAsyncThunk to add real-world data handling.
