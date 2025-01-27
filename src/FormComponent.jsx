@@ -32,6 +32,7 @@ function FormComponent() {
           <input
             type="text"
             name="name"
+            required
             placeholder="username"
             value={form.name}
             onChange={handleChange}
@@ -45,6 +46,7 @@ function FormComponent() {
             name="password"
             placeholder="password"
             value={form.password}
+            required
             onChange={handleChange}
             className="inset-shadow-sm inset-shadow-gray-300 rounded-xl w-full p-3 text-sm placeholder-gray-600"
           />
@@ -54,7 +56,7 @@ function FormComponent() {
         type="submit">LOGIN</button>
         </div>
       
-        <p className="text-sm text-center text-gray-400 cursor-pointer">Sign Up</p>
+        <p className="text-sm text-center text-gray-400 cursor-pointer hover:text-gray-600 transition">Sign Up</p>
       </form>
     </div>
   );
