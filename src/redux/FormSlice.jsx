@@ -20,9 +20,14 @@ export const formSlice = createSlice({
         },
         setLoggedIn: (state, action) => {
             state.isLoggedIn = action.payload;
+        },
+        logOut: (state) =>{
+            state.isLoggedIn = false;
+            state.name = "";
+            state.password = "";
         }
     }
 })
 
-export const {updateForm, resetForm, setLoggedIn} = formSlice.actions
+export const {updateForm, resetForm, setLoggedIn, logOut} = formSlice.actions
 export default formSlice.reducer
