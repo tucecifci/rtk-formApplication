@@ -7,7 +7,11 @@ function WelcomePage() {
 
   return (
     <>
-      <h1>Hoşgeldin {name} ! </h1>
+    <div className="flex flex-col items-center justify-center min-h-screen gap-6 bg-gradient-to-r from-blue-500 to-purple-500">
+    <h1 className="text-7xl text-center font-medium text-white ">👋 Welcome {name}! </h1>
+    <p className="text-white">Discover seamless solutions designed to make your life smarter, faster, and better.</p>
+    </div>
+    
     </>
   );
 }
