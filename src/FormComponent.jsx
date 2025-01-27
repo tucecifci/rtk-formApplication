@@ -19,10 +19,10 @@ function FormComponent() {
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gradient-to-r from-blue-500 to-purple-500">
+    <div className="flex items-center justify-center min-h-screen shadow-2xl shadow-black/50 rounded-4xl">
       <form
         onSubmit={handleSubmit}
-        className="bg-white rounded-lg shadow-lg p-6 w-full h-full max-w-xs"
+        className="bg-white rounded-lg shadow-xl shadow-gray-400 p-6 w-full h-full max-w-xs"
       >
         <h1 className="text-3xl mb-8 mt-4 font-bold text-center ">Login</h1>
         <div className="mb-4">
@@ -32,10 +32,10 @@ function FormComponent() {
           <input
             type="text"
             name="name"
-            placeholder="Username or email"
+            placeholder="username"
             value={form.name}
             onChange={handleChange}
-            className="border border-gray-400 mt-4 mb-2 rounded-lg w-full p-3 text-sm placeholder-gray-600"
+            className="inset-shadow-sm inset-shadow-gray-300 mt-4 mb-2 rounded-xl w-full p-3 text-sm placeholder-gray-600"
           />
         </div>
         <div className="mb-4">
@@ -43,13 +43,17 @@ function FormComponent() {
           <input
             type="password"
             name="password"
-            placeholder="Password"
+            placeholder="password"
             value={form.password}
             onChange={handleChange}
-            className="border border-gray-400 rounded-lg w-full p-3 text-sm placeholder-gray-600"
+            className="inset-shadow-sm inset-shadow-gray-300 rounded-xl w-full p-3 text-sm placeholder-gray-600"
           />
         </div>
-        <button className="w-full cursor-pointer bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-xl py-2 mt-4 mb-44 hover:bg-blue-600 transition" type="submit">LOGIN</button>
+        <div className="flex justify-center">
+        <button className="w-32 shadow-gray-500 shadow-md cursor-pointer bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-3xl py-3 mt-6 mb-36 hover:bg-blue-600 transition tracking-wider" 
+        type="submit">LOGIN</button>
+        </div>
+      
         <p className="text-sm text-center text-gray-400 cursor-pointer">Sign Up</p>
       </form>
     </div>
